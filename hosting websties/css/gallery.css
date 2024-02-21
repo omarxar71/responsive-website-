@@ -1,0 +1,43 @@
+.gallery{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--main-background-color);
+}
+.gallery .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+.gallery .container .box{
+ padding: 15px;
+ background-color: white;
+ box-shadow: 0px 12px 20px 0 #777;
+}
+.gallery .container .box .image{
+position: relative;
+overflow: hidden;
+}
+.gallery .container .box .image::before{
+content: '';
+position: absolute;
+background-color: rgba(255, 255, 255, 0.541);
+height: 0px;
+width: 0px;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+opacity: 0;
+
+}
+.gallery .container .box .image:hover::before{
+animation: flashing 0.7s;
+z-index: 100;
+}
+.gallery .container .box .image img{
+ width: 100%;
+ transition: .3s;
+}
+.gallery .container .box .image img:hover{
+ transform:rotate(3deg) scale(1.1);
+}

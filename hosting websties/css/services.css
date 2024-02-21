@@ -1,0 +1,96 @@
+.services{
+    padding-top:var(--main-padding) ;
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--main-background-color);
+}
+.services .container{
+    display: grid;
+   gap: 40px;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+}
+.services .container .box1{
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 3px 3px 3px #777;
+  counter-increment: services;
+  transition: .3s;
+  position: relative;
+}
+.services .container .box1::before{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color-);
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0px;
+    transition: .3s;
+
+}
+.services .container .box1:hover{
+    transform: translateY(-10px);
+}
+.services .container .box1:hover::before{
+ 
+    height: 6px;
+    width: 100%;
+
+}
+.services .container .box1 i{
+    color: #d5d5d5;
+    font-size: 40px;
+}
+.services .container .box1 h3{
+    color: var(--main-color-);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 25px;
+}
+.services .container .box1 .info{
+    text-align: right;
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 15px;
+
+}
+.services .container .box1 .info::before{
+    position: absolute;
+    content: '0' counter(services);
+    position: absolute;
+    left: 1px;
+    font-size: 30px;
+    bottom: 3px;
+    color: white;
+    background: var(--main-color-);
+    height: calc(100% - 1px);
+    width: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+
+}
+.services .container .box1 .info::after{
+    content: '';
+    position: absolute;
+    background-color: #d5d5d5;
+    width: 45px;
+    height: 100%;
+    left: 80px;
+    bottom: 2px;
+    transform: skewX(-30deg);
+}
+.services .container .box1 .info a{
+ color: var(--main-color-);
+ 
+
+}
+.services .container .box1 .info p{
+color: var(--main-color-);
+
+}

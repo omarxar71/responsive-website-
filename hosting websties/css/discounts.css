@@ -1,0 +1,97 @@
+.discounts{
+
+   
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.discounts .image{
+    background-image: url(/images/download1.jpg);
+    background-size: cover;
+    color: white;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+}
+.discounts .image::before{
+content: '';
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+position: absolute;
+background-color:#03579cec;
+z-index: -1;
+animation: change-background 10s linear infinite ;
+}
+@media(max-width:991px){
+    .discounts .image{
+        flex-basis: 100%;
+    }
+}
+.discounts .form{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:991px){
+    .discounts .form{
+        flex-basis: 100%;
+    }
+}
+.discounts .form .input{
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+   
+}
+.discounts .form .content .text{
+resize: none;
+height: 200px;
+}
+.discounts .form .input:focus{
+outline: none;
+caret-color: var(--main-color-);
+}
+.discounts .form .content .btn{
+    color: white;
+    background-color: var(--main-color-);
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.discounts .form .content .btn:hover{
+background-color: var(--main-color-alt);
+}
+.discounts .content { 
+    text-align: center;
+    padding: 0 20px;
+}
+.discounts .content p{
+   font-weight: 500;
+   line-height: 1.8;
+}
+.discounts .content h2{
+font-size: 40px;
+padding: 20px 0 20px;
+font-weight: bold;
+}
+.discounts .image img{
+    width: 400px;
+    max-width: 100%;
+}
+  

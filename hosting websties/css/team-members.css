@@ -1,0 +1,101 @@
+.team-members{
+    padding-top:var(--main-padding) ;
+    padding-bottom: var(--main-padding);
+  
+    position: relative;
+}
+.team-members .container{
+display: grid;
+grid-template-columns: repeat( auto-fill , minmax(300px , 1fr));
+gap: 30px ;
+}
+.team-members .container .box{
+position: relative;
+transition: 0.3s;
+}
+.team-members .container .box::before{
+content: '';
+position: absolute;
+background-color: #f3f3f3;
+right: 0;
+top:0 ;
+height: 100%;
+width: calc(100% - 60px);
+border-radius: 10px;
+z-index: -2;
+}
+.team-members .container .box::after{
+    content: '';
+    position: absolute;
+    background-color:#e4e4e4;
+    right: 0;
+    top:0 ;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: 0.3s;
+}
+.team-members .container .box:hover::after{
+    content: '';
+    position: absolute;
+    background-color:#e4e4e4;
+    right: 0;
+    top:0 ;
+    height: 100%;
+    width:calc(100% - 60px) ;
+    border-radius: 10px;
+    z-index: -1;
+}
+.team-members .container .box .data{
+display: flex;
+align-items: center;
+padding-top: 60px;
+}
+.team-members .container .box .data img{
+max-width: calc(100% - 60px);
+transition: 0.3s;
+border-radius: 10px;
+
+}
+.team-members .container .box:hover .data img{
+filter:grayscale(100%) ;
+
+}
+.team-members .container .box .data .social{
+width: 60px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+
+}
+.team-members .container .box .data .social a{
+width: 60px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.team-members .container .box .data .social i{
+color: #777;
+}
+.team-members .container .box .data .social i:hover{
+color: var(--main-color-);
+}
+.team-members .container .box .info{
+padding-left: 80px;
+padding-bottom: 30px;
+}
+.team-members .container .box .info h3{
+    color: var(--main-color-);
+    padding-bottom:10px ;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+.team-members .container .box .info p{
+    padding-left: 10px;
+    color: #777;
+}

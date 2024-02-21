@@ -1,0 +1,57 @@
+.testimonial{
+    padding-top:var(--main-padding) ;
+    padding-bottom: var(--main-padding);
+    background-color: var(--main-background-color);
+    position: relative;
+}
+.testimonial .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  gap: 40px;
+}
+.testimonial .image {
+ 
+    
+   
+}
+.testimonial .image img{
+    max-width: 100%;
+    border-radius: 50%;
+    width: 100px;
+    position: absolute;
+    background-color: #777;
+    border: 10px solid var(--main-background-color) ;
+    right: -11px;
+    top: -61px;
+    
+}
+.testimonial .container .box{
+    padding: 20px;
+  border: 1px solid #777;
+  background-color: white;
+  box-shadow: 3px 3px 3px #777;
+  border-radius: 6px;
+  position: relative;
+}
+.testimonial .container .box h3{
+    padding: 0 0 10px;
+    font-weight: bold;
+    
+}
+.testimonial .container .box p{
+    padding: 0 0 10px;
+    color: #777;
+
+}
+.testimonial .container .box .rating i{
+    color: #ffc107;
+    padding-bottom: 10px;
+    
+
+}
+.testimonial .container .box p{
+ line-height: 2;
+}
+   
+
+

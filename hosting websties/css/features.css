@@ -1,0 +1,195 @@
+.features{
+    padding-top: var(--main-padding);
+    padding-top:var(--main-padding) ;
+    position: relative;
+    background-color: white;
+}
+.features .container{
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+gap: 40px;
+}
+.features .container .box{
+text-align: center;
+border: 1px solid #ccc;
+}
+.features .container .image-holder{
+    position: relative;
+    overflow: hidden;
+}
+.features .container .box .image-holder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    left: 0;
+    
+    top: 0;
+}
+.features .container  .quality .image-holder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    left: 0;
+    background-color: red;
+    top: 0;
+}
+.features .container  .time .image-holder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    left: 0;
+    background-color: green;
+    top: 0;
+}
+.features .container  .passion  .image-holder::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    left: 0;
+    background-color: blue;
+    top: 0;
+}
+.features .container .image-holder::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 161px 512px 0px 0px;
+    border-color: transparent white transparent transparent;
+    transition: 0.5s;
+   
+}
+.features .container .box:hover .image-holder::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 161px 512px 512px 0px;
+    border-color: transparent white transparent white;
+   
+  }
+.features .container .image-holder img{
+width: 100%;
+}
+.features .container .box h2{
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    position: relative;
+    
+   
+}
+.features .container .box h2::before{
+    /* without the color  */
+    content: '';
+    position: absolute;
+    /* background-color:var(--main-color-); */
+    width: 138px;
+    height: 10px;
+    left: 30%;
+    top: 72%;
+    border-radius: 5px;
+    
+}
+.features .container .quality h2::before{
+    content: '';
+    position: absolute;
+    background-color:rgba(245, 2, 2, 0.76);
+    width: 138px;
+    height: 5px;
+    left: 30%;
+    top: 72%;
+    border-radius: 5px;
+    
+}
+.features .container .time h2::before{
+    content: '';
+    position: absolute;
+    background-color:rgba(0, 128, 0, 0.658);
+    width: 138px;
+    height: 5px;
+    left: 30%;
+    top: 72%;
+    border-radius: 5px;
+    
+}
+.features .container .passion h2::before{
+    content: '';
+    position: absolute;
+    background-color:var(--main-color-); 
+    width: 138px;
+    height: 5px;
+    left: 30%;
+    top: 72%;
+    border-radius: 5px;
+    
+}
+   
+
+.features .container .box p{
+padding-top: 50px;
+color: #777;
+line-height: 2;
+padding: 30px;
+}
+.features .container .box a{
+    font-size: 20px;
+    border: 3px solid  ;
+    padding: 10px 30px ;
+    display: block;
+    width: fit-content;
+    margin:0 auto 10px;
+    border-radius: 6px;
+    transition: .5s;
+    
+}
+.features .quality  a{
+    font-size: 20px;
+    border: 3px solid red ;
+    padding: 10px 30px ;
+    display: block;
+    width: fit-content;
+    margin:0 auto 10px;
+    color:red ;
+    background: linear-gradient(to right , red 50% , white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .container .box:hover a{
+    background-position: left bottom;
+    color: white;
+}
+.features .time  a{
+    font-size: 20px;
+    border: 3px solid green ;
+    padding: 10px 30px ;
+    display: block;
+    width: fit-content;
+    margin:0 auto 10px;
+    color:green;
+    background: linear-gradient(to right , green 50% , white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .passion  a{
+    font-size: 20px;
+    border: 3px solid var(--main-color-) ;
+    padding: 10px 30px ;
+    display: block;
+    width: fit-content;
+    margin:0 auto 10px;
+    color:var(--main-color-) ;
+    background: linear-gradient(to right , var(--main-color-) 50% , white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}

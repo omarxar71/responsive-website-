@@ -1,0 +1,237 @@
+/* start css links  */
+@import url(/css/header.css);
+@import url(/css/landing.css);
+@import url(/css/article.css);
+@import url(/css/gallery.css);
+@import url(/css/features.css);
+@import url(/css/testimonial.css);
+@import url(/css/team-members.css);
+@import url(/css/services.css);
+@import url(/css/our-skills.css);
+@import url(/css/how-it-works.css);
+@import url(/css/events.css);
+@import url(/css/pricing.css);
+@import url(/css/video.css);
+@import url(/css/stats.css);
+@import url(/css/discounts.css);
+@import url(/css/footer.css);
+
+/* end css links  */
+/* start global rules  */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Work Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+:root{
+    --main-color-:#2196f3;
+    --main-color-alt:#1787E0;
+    --main-transtion-duriation:.3s;
+    --main-padding:100px;
+    --main-background-color:#ececec;
+    
+
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+  }
+  /* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+  /*end global rules */
+  /* start aninmation  */
+  @keyframes up-and-down {
+    0% , 100%{
+      top: 0;
+    }
+    50%{
+      top: -50px;
+    }
+
+
+  }
+  @keyframes bouncing {
+    0%,10% ,20% , 50% , 80% , 100% {
+      transform: translateY(0);
+    }
+   40% , 60%{
+    transform: translateY(-15px);
+   }
+  }
+  @keyframes left-move {
+    50% {
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      border-radius: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes right-move {
+    50% {
+      right: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      border-radius: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes moving-arrow {
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  @keyframes flashing {
+    0% , 40%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      width: 200%;
+      height: 200%;
+    }
+  }
+  @keyframes change-background {
+    0% , 100%{
+      background-image: url(/images/discount.png);
+    }
+    50%{
+      background-image: url(/images/download1.jpg)
+    }
+  }
+  /* end animation */
+
+/*start main title  */
+.main-title{
+border:2px solid black; 
+padding: 10px 20px ;
+font-size: 30px;
+width: fit-content;
+margin: 0 auto 80px;
+position: relative;
+z-index: 1;
+transition: var(--main-transtion-duriation);
+
+}
+.main-title:hover{
+  color: white ;
+  border: 2px solid white ;
+  transition-delay: 0.7s;
+}
+.main-title::before{
+content: '';
+width: 12px ;
+height: 12px ;
+background-color: var(--main-color-);
+position: absolute;
+border-radius: 50%;
+left: -30px;
+top: 50%;
+transform: translateY(-50%);
+}
+.main-title::after{
+  content: '';
+  width: 12px ;
+  height: 12px ;
+  background-color: var(--main-color-);
+  position: absolute;
+  border-radius: 50%;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title:hover::before{
+z-index: -1;
+animation: left-move 1s linear forwards ;
+}
+.main-title:hover::after{
+z-index: -1;
+animation: right-move 1s linear forwards ;
+}
+/*end main title  */
+
+.spikes{
+position: relative;
+}
+.spikes::after{
+content: '';
+position: absolute;
+right: 0;
+z-index: 1;
+width:100% ;
+height:30px  ;
+/* background-color: red; */
+background-image: linear-gradient(135deg , white 25% , transparent 25%),linear-gradient(225deg , white 25% , transparent 25%);
+background-size: 30px 30px ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+.footer{
+    background-color:#111111 ;
+    padding: 70px 0 0;
+}
+.footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+}
+.footer .container .social h3{
+ color: white;
+ font-size: 40px;
+ font-weight: bold;
+ padding-bottom: 20px;
+}
+.footer .container .social{
+    margin-right: 10px;
+}
+.footer .container .social .s-links i{
+background-color: #181717;
+color:  rgb(176, 177, 179);
+font-size: 30px;
+padding: 20px;
+border-radius: 1px;
+transition: .4s;
+}
+.footer .container .social .s-links i:hover{
+
+background-color: var(--main-color-);
+}
+.footer .container .social p{
+
+color: white;
+font-size: 15px;
+padding-top: 20px;
+}
+.footer .container .links .box{
+    display: flex;
+    cursor: pointer;
+    transition: .4s;
+    color: rgb(176, 177, 179);
+    padding: 10px;
+   
+    
+}
+.footer .container .links .box:not(:last-child){
+    border-bottom: 1px solid #777;
+}
+
+.footer .container .box:hover{
+  transform: translateX(10px);
+color: white;
+    
+}
+
+.footer .container .links i{
+    color: var(--main-color-);
+    padding-right: 6px;
+   
+
+}
+.footer .container .locations .location{
+    padding-bottom: 20px;
+}
+.footer .container .locations .location{
+    display: flex;
+    
+}
+.footer .container .locations .location i{
+    font-size: 40px;
+    margin-right: 10px;
+    color: var(--main-color-);
+
+}
+.footer .container .locations .location p {
+color:  rgb(176, 177, 179);
+margin: 10px auto;
+}
+
+.footer .container .photos img{
+    max-width: 100%;
+    width: 60px;
+   
+}
+.footer .container .copyright {
+text-align: center;
+color: white;
+border-top: 1px solid #777;
+flex: 1;
+width: 100%;
+margin: 50px 0 0;
+padding: 25px 0;
+}

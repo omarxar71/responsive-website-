@@ -1,0 +1,156 @@
+.pricing{
+    padding-top:var(--main-padding) ;
+    padding-bottom:var(--main-padding) ;
+    background-color: var(--main-background-color);
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px;
+}
+.pricing .container .box1{
+    text-align: center;
+    background-color: white;
+    box-shadow: 3px 3px 3px #c0bebe;
+    border-radius: 6px;
+    position: relative;
+    transition: 0.4s;
+    z-index: 1;
+}
+.pricing .container .popular label{
+    position: absolute;
+    writing-mode: vertical-rl;
+    right: 20px;
+    top: 0;
+    background-color: var(--main-color-);
+    padding: 10px 10px 30px 10px ;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.pricing .container .popular label::before{
+    content: '';
+    position:absolute ;
+    border-color: transparent transparent white transparent ;
+    border-width: 20px;
+    border-style: solid;
+    bottom: 0;
+    right: 1px;
+
+}
+@media(min-width:1200px) {
+    .pricing .container  .popular{
+        top: -20px;
+    }
+}
+.pricing .container .box1::before{
+position: absolute;
+content: '';
+height: 50%;
+width: 0;
+top: 0;
+left: 0;
+opacity: 0;
+background-color: #b8b0b0;
+transition: .4s;
+z-index: -1;
+
+}
+.pricing .container .box1:hover::before{
+
+height: 50%;
+width: 100%;
+opacity: 50%;
+background-color: #c0bbbb;
+
+
+}
+.pricing .container .box1::after{
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #f6f6f6;
+    transition: .4s;
+    z-index: -1;
+}
+.pricing .container .box1:hover::after{
+    height: 50%;
+    width: 100%;
+    opacity: 50%;
+    background-color: #c0bbbb;
+    
+}
+.pricing .container .box1 h3{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: -1;
+}
+.pricing .container .box1 i{
+    color: var(--main-color-);
+    padding: 10px 0 15px;
+    font-size: 80px;
+}
+.pricing .container .box1 .price {
+display: flex;
+justify-content: center;
+align-self: center;
+flex-direction: column;
+}
+.pricing .container .box1 .price .amount{
+font-size: 40px;
+font-weight: bold;
+color: var(--main-color-);
+
+}
+.pricing .container .box1 .price .time{
+color: #777;
+padding-bottom: 10px;
+
+}
+
+.pricing .container .box1  ul li{
+padding: 20px;
+border-bottom: 1px solid #d6cfcf;
+display: flex;
+
+}
+.pricing .container .box1  ul li::before{
+font-family:'Font Awesome 6.4.2 Free' ;
+content: "\f00c";
+font-weight: 900;
+margin-right: 10px;
+
+}
+.pricing .container .box1  ul li:last-child{
+border: none;
+padding-bottom: 80px;
+}
+.pricing .container .box1 a{
+background-color: white;
+color:var(--main-color-);
+padding: 20px;
+margin: 20px auto;
+border: 3px solid var(--main-color-);
+border-radius: 10px;
+transition: .5s;
+text-align: center;
+display: flex;
+justify-self: center;
+align-items: center;
+width: fit-content;
+font-weight: bold;
+
+
+
+}
+.pricing .container .box1 a:hover{
+    background-color: var(--main-color-);
+    color: white;
+    
+   
+}
